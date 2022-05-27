@@ -4,7 +4,9 @@
     <%= image_tag movie.poster_url %>
     <%= movie.title %>
     <%= movie.overview %>
+    <%= link_to "delete bookmark", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %>
   <% end %>
-
+<br>
 <%= link_to "add new bookmark", new_list_bookmark_path(@list), class: "btn btn-flat" %>
-  <%= link_to "delete this list", list_path(@list), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this list?" } %>
+<%= link_to "return", lists_path, class: "btn btn-flat" %>
+<%= link_to "delete this list", list_path(@list), method: :delete, class: "btn btn-cancel btn btn-flat", data: { confirm: "Are you sure you want to delete this list?" } %>
