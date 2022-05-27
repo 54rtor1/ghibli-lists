@@ -9,6 +9,10 @@ class ListsController < ApplicationController
     @bookmark = Bookmark.new
   end
 
+  def new
+    @list = List.new
+  end
+
   private
   def set_list
     @list = List.find(params[:id])
