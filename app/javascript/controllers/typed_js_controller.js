@@ -3,9 +3,9 @@ import Typed from "typed.js"
 export default class extends Controller {
   connect() {
     new Typed(this.element, {
-      strings: ["Change your life", "Learn to code"],
-      typeSpeed: 50,
-      loop: true
+      strings: [".・。.・゜✭・.・✫・Studio Ghibli lists・。.・゜✭・.・✫・."],
+      typeSpeed: 70,
+      loop: false
     });
   }
 }
