@@ -1,7 +1,17 @@
 // Specific CSS for your home-page
 body {
-  background-color: rgb(135, 201, 200);
+  background-color: rgb(160, 201, 201);
+  & p {
+    color:rgb(57, 57, 57)
+  }
 
+  & h1, h2 {
+    color: white;
+  }
+
+  & h5, h3 {
+    color: #d565bf;
+  }
   }
 
   .poster img {
@@ -13,9 +23,6 @@ body {
 
 .card-index {
   border-radius: 20px;
-  &:hover {
-    opacity: 0.9
-  }
 }
 
 .card-show {
@@ -34,10 +41,20 @@ body {
   margin: 30px;
 }
 
-.btn:hover {
-  transition: transform 250ms;
+.link {
+color: rgb(255, 255, 255);
+font-weight: 300;
+  &:hover {
+    color:fade-out($color: #d565bf, $amount: 0);
+    font-weight: bolder;
+    opacity: 0.8;
+  }
 }
 
-.link {
-color: rgb(98, 81, 112);
+.title-link {
+  color:#d565bf;
+  &:hover {
+    font-weight: bolder;
+    color: #d565bf;
+  }
 }
