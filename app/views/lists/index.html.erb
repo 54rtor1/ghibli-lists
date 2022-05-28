@@ -3,7 +3,7 @@
   <h1 class="title p-5 text-center">Ghibli lists</h1>
   <div class="row">
     <% @lists.each do |list| %>
-    <div class="col-sm-6 p-3">
+    <div class="col-sm-4 p-3">
      <div class="card card-index">
         <div class="card-body overflow-scroll">
             <h5 class="card-title text-center"><%= link_to list_path(list), class: "btn btn-flat stretched-link" do %>
@@ -13,7 +13,7 @@
               <% @bookmarks.each do |bookmark| %>
                 <% @movie_id = bookmark.movie_id %>
                 <% @movie = Movie.where(id: @movie_id).select(:id, :poster_url).take %>
-                <div class ="poster col-4 p-3"><%= image_tag @movie.poster_url %>
+                <div class ="poster col-4"><%= image_tag @movie.poster_url %>
                 </div>
               <% end %></p>
             </div>
