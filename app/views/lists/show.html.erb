@@ -1,17 +1,19 @@
 <div class="container p-5">
    <h2 class="text-center"><%= @list.name %></h2>
-  <div class="row">
+  <div class="row justify-content-center">
     <% @list.movies.each do |movie| %>
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-      <div class="col-sm-4 p-5">
+      <div class="col-sm-3 p-5">
         <div class="card">
          <%= image_tag movie.poster_url %>
             <div class="card-body">
               <h5 class="card-title"><%= movie.title %></h5>
-              <p class="card-text"><%= movie.overview %><%= link_to "x", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %></p>
+              <p class="card-text"><%= movie.overview %></p>
             </div>
             <div class="card-footer">
-               <small class="text-muted">Last updated 3 mins ago</small>
+               <small class="text-muted"><%= bookmark.comment %>
+               <div class="text-end"><%= link_to "x", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %>
+               </div></small>
             </div><!--.footer-->
         </div><!--.card-->
       </div><!--.col-->
