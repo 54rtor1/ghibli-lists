@@ -1,8 +1,8 @@
 <div class="container p-5">
-<h3 class="text-center"> Add a movie to your <%= @list.name %> list </h3>
+<h3 class="text-center">Add a movie to <%= @list.name.downcase %></h3>
 <%= simple_form_for [@list, @bookmark] do |f| %>
-          <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { data: { controller: "slect2" } } %>
-          <%= f.input :comment, placeholder: "Enter a comment about the movie" %>
+          <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Which movie would you like to add?", input_html: { data: { controller: "slect2" } } %>
+          <%= f.input :comment, placeholder: "Any comments?" %>
           <%= f.submit "Add movie", class: "btn btn-flat" %>
         <% end %>
 </div>

@@ -3,8 +3,8 @@
   <div class="row justify-content-center">
     <% @list.movies.each do |movie| %>
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-      <div class="col-sm-3 p-5">
-        <div class="card">
+      <div class="col-sm-3 p-5 ind">
+        <div class="card card-show overflow-scroll">
          <%= image_tag movie.poster_url %>
             <div class="card-body">
               <h5 class="card-title"><%= movie.title %></h5>
@@ -12,16 +12,15 @@
             </div>
             <div class="card-footer">
                <small class="text-muted"><%= bookmark.comment %>
-               <div class="text-end"><%= link_to "x", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %>
-               </div></small>
+               <%= link_to "x", bookmark_path(bookmark), method: :delete, class: "btn-flat link", data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %></small>
             </div><!--.footer-->
         </div><!--.card-->
       </div><!--.col-->
     <% end %>
   </div><!--.row-->
   <div class="links text-center">
-    <%= link_to "add new bookmark", new_list_bookmark_path(@list), class: "btn btn-flat" %>
-    <%= link_to "return", lists_path, class: "btn btn-flat" %>
-   <%= link_to "delete this list", list_path(@list), method: :delete, class: "btn btn-cancel btn btn-flat", data: { confirm: "Are you sure you want to delete this list?" } %>
+    <%= link_to "+ film", new_list_bookmark_path(@list), class: "btn btn-flat link" %>
+    <%= link_to "all lists", lists_path, class: "btn btn-flat link" %>
+   <%= link_to "delete list", list_path(@list), method: :delete, class: "btn btn-cancel btn btn-flat link", data: { confirm: "Are you sure you want to delete this list?" } %>
   </div><!--.links-->
 </div><!--.container>

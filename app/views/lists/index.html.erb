@@ -6,7 +6,7 @@
     <div class="col-sm-4 p-3">
      <div class="card card-index">
         <div class="card-body overflow-scroll">
-            <h5 class="card-title text-center"><%= link_to list_path(list), class: "btn btn-flat stretched-link" do %>
+            <h5 class="card-title text-center"><%= link_to list_path(list), class: "btn btn-flat stretched-link link" do %>
             <%= list.name %>
             <% end %></h5>
             <div class="posters row justify-content-between"><% @bookmarks = list.bookmarks %>
@@ -21,6 +21,6 @@
       </div>
     </div>
     <% end %>
-    <%= link_to "Create new movie list", new_list_path, class: "btn btn-flat p-5" %>
+    <%= link_to "Create your own list!", new_list_path, class: "btn btn-flat p-5 link" %>
   </div>
 </div><!--.container-->
