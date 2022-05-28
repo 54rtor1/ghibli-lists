@@ -26,6 +26,7 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
+    opacity: 0.7;
 
   }
 
@@ -33,7 +34,6 @@ body {
   border-radius: 20px;
   &:hover {
      background-color: #d565bf;
-
   }
 }
 
