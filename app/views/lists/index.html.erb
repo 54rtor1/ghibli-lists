@@ -17,3 +17,12 @@
     <%= link_to "Create new movie list", new_list_path, class: "btn btn-flat p-5" %>
   </div>
 </div><!--.container-->
+
+<% @lists.each do |list| %>
+  <% @bookmarks = list.bookmarks %>
+  <% @bookmarks.each do |bookmark| %>
+      <% @movie_id = bookmark.movie_id %>
+     <% @movie = Movie.where(id: @movie_id).select(:id, :poster_url).take %>
+    <% raise %>
+  <% end %>
+<% end %>
