@@ -1,24 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Very simple application to exercise my ORM (Active Record) skills, CRUD (although opted for not adding an update action) and MVC pattern on rails. 
+Three models were generated: a movies model, a list and a bookmark. The bookmark works as a joint table and receives the foreign keys from movies and lists, making it possible to add movies on list. I also played with some cool tools like Typed.Js using Stimulus. 
