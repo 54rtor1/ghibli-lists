@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+body {
+  background-color: rgb(171, 224, 214);
+
+  }
+
+  .poster img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+.card-index {
+  border-radius: 20px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
