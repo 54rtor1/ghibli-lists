@@ -9,8 +9,15 @@ body {
     color: white;
   }
 
-  & h5, h3 {
+  & h3 {
     color: #d565bf;
+  }
+  & .title{
+    font-size: 22px;
+  }
+  & h5 {
+    color: #d565bf;
+    font-size: 16px;
   }
   }
 
@@ -19,6 +26,7 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
+
   }
 
 .card-index {
@@ -28,7 +36,7 @@ body {
 .card-show {
   width: 250px;
   height: 400px;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 20px 20px;
 
   & img {
   width: 100%;
