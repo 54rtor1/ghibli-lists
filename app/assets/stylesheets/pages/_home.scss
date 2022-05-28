@@ -31,6 +31,10 @@ body {
 
 .card-index {
   border-radius: 20px;
+  &:hover {
+     background-color: #d565bf;
+
+  }
 }
 
 .card-show {
@@ -63,6 +67,6 @@ font-weight: 300;
   color:#d565bf;
   &:hover {
     font-weight: bolder;
-    color: #d565bf;
+    color: #ffffff;
   }
 }

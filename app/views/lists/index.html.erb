@@ -1,10 +1,10 @@
 <div class="container p-5 mt-5">
   <h1 class="title text-center"> <span data-controller="typed-js"></span></h1>
   <h5 class="text-center mt-2">Your favorite films by theme!</h5>
-  <div class="row p-5">
+  <div class="row p-5 overflow-scroll">
     <% @lists.each do |list| %>
     <div class="col-sm-4 p-3">
-     <div class="card card-index">
+     <div class="card card-index ">
         <div class="card-body overflow-scroll">
             <h5 class="card-title text-center"><%= link_to list_path(list), class: "btn btn-flat stretched-link title-link" do %>
             ♡ <%= list.name %> ♡

@@ -1,7 +1,7 @@
 <div class="container p-5">
-<div class="row justify-content-center p-5 border border-white">
+<div class="row justify-content-center p-5 border border-white rounded">
 <div class ="col-md-6">
-<h3 class="text-center">Add a movie to <%= @list.name.downcase %></h3>
+<h3 class="text-center">*+:｡ Add a movie to <%= @list.name.downcase %> ｡:+*</h3>
 <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Which movie would you like to add?", input_html: { data: { controller: "slect2" } } %>
           <%= f.input :comment, placeholder: "Any comments?" %>
